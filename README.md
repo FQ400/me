@@ -11,5 +11,4 @@ create a symbolic link
 # Git Commands
 
 update local branch list
-`$ git remote update origin --prune`
-
+`$ git remote update origin --prune` or `$ git fetch -p`
