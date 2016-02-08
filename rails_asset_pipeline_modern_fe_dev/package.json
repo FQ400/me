@@ -1,0 +1,15 @@
+{
+  "name": "rails_asset_pipeline_modern_fe_dev",
+  "version": "1.0.0",
+  "description": "index.html is the presentation layer using remark.js Start a webserver like Python3: `python -m http.server` or Python2: `python -m SimpleHTTPServer 8000` and open index.html in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cleaver rails_asset_pipeline_modern_fe_dev.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cleaver": "^0.8.2"
+  }
+}
