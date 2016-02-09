@@ -1,7 +1,8 @@
-title: Asset Pipeline - Modern FE Dev
+title: Asset Pipeline - Modern Frontend Development
 author:
   name: Carsten Lamm
   github: https://github.com/FQ400
+  url: http://www.kontextr.com
 output: basic.html
 --
 
@@ -10,19 +11,20 @@ output: basic.html
 
 --
 
-### Table Of Content
+### table of content
 
-1. Motivation  
-1. Frontend Definition
-1. Toolbox Overview
-
+1. background  
+1. frontend definition
+1. asset pipeline?
+1. motivation  
+1. tools
 
 --
 
-### Motivation
+### my background
 
 - started with Rails 2 up to Rails 3 (~3 years)
-- **S**ingle **P**age **A**pplications using REST-Apis
+- **S**ingle **P**age **A**pplications using REST-APIs
   - AngularJS (~2 year)
 - node and React (~1 year)
 - now back to Rails 4
@@ -33,15 +35,36 @@ output: basic.html
 
 ... building web applications with UI  
 ... for mobile/desktop devices with/without touch  
-... with different screen resolution.  
-... includes also build tools to optimize performance.  
+... with different screen resolutions.
+
+... also use build tools to optimize performance.  
+
 ... automatically test your code and layouts.  
+
 ... tracking and AB-Tests.  
 ...
 
 --
 
-### Toolbox Overview
+### Asset Pipeline ...
+
+... is a mighty building tool  
+... which combines and compresses assets.  
+
+... super integrated into Rails via gem.  
+
+... produces assets marked with hashes.  
+...
+
+--
+
+### motivation ;)
+
+![](./combine_all_the_tools.jpg)
+
+--
+
+### some tools
 
 [node](https://nodejs.org/en/) - Javascript on the server  
 [npm](https://www.npmjs.com/) - Node Package Manager including package.json  
@@ -56,55 +79,59 @@ output: basic.html
 
 --
 
-### Grouped Tools I
+### grouped tools
 
-**package manager**
-- npm (node)
-- bower (Javascript/CSS)
-- bundler (Ruby)
+![](./grouped_tools.jpg)
 
 --
 
-### Grouped Tools II
+### kind of web app
 
-**build tools**
-- npm
-- grunt
-- gulp
-- webpack
-- Asset Pipeline
-
---
-
-### Grouped Tools III
-
-**compiler**
-- babel
-- Asset Pipeline
+- API/multiple clients - SPA
+- (no) API/one client
+- enterprise app
+- small website
+- progressive enhancement VS graceful degradation
 
 --
 
-###
+### progressive enhancement
 
-Wie sopielt das zusammen
+- page works without Javascript
+- javascript make it more useable
+  - date-input => fancy-datepicker
+
+- bundler for ruby dependencies
+- (bower for CSS/JS dependencies) => [rails-assets.org](rails-assets.org)
+- asset pipeline pack
 
 
-Good or Bad?
+combine:
 
-depends on the kind of pagehttps://en.wikipedia.org/wiki/Source-to-source_compiler
-SPA where rails is just an API hmm...
+Asset Pipeline
+
+--
+
+ -> maybe Progressive Enhancement
+
+
 
 
 
 ES6 ??? it can pack
 Modules? Needed?
+--
 
 ## kontextR
+
+
 
 --
 ### Sources
 
-[Wiki Compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
-[Standard ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/)
-[Cleaver](https://www.npmjs.com/package/cleaver)
-[Sprocket](https://github.com/rails/sprockets)
+[Wiki Compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)  
+[Standard ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/)  
+[Cleaver](https://www.npmjs.com/package/cleaver)  
+[Sprocket](https://github.com/rails/sprockets)  
+[Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
+[Graceful Degradation](https://en.wikipedia.org/wiki/Fault_tolerance)

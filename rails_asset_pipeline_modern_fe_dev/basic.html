@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Asset Pipeline - Modern FE Dev</title>
+  <title>Asset Pipeline - Modern Frontend Development</title>
   <style type="text/css">
     body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -369,19 +369,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
-    <section class="slide-content"><h3 id="table-of-content">Table Of Content</h3>
+    <section class="slide-content"><h3 id="table-of-content">table of content</h3>
 <ol>
-<li>Motivation  </li>
-<li>Frontend Definition</li>
-<li>Toolbox Overview</li>
+<li>background  </li>
+<li>frontend definition</li>
+<li>asset pipeline?</li>
+<li>motivation  </li>
+<li>tools</li>
 </ol>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h3 id="motivation">Motivation</h3>
+    <section class="slide-content"><h3 id="my-background">my background</h3>
 <ul>
 <li>started with Rails 2 up to Rails 3 (~3 years)</li>
-<li><strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplications using REST-Apis<ul>
+<li><strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplications using REST-APIs<ul>
 <li>AngularJS (~2 year)</li>
 </ul>
 </li>
@@ -392,69 +394,87 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </div>
   <div class="slide hidden" id="slide-4">
     <section class="slide-content"><h3 id="frontend-development-means-">Frontend Development means ...</h3>
-<p>... building web applications with UI<br>... for mobile/desktop devices with/without touch<br>... with different screen resolution.<br>... includes also build tools to optimize performance.<br>... automatically test your code and layouts.<br>... tracking and AB-Tests.<br>...</p>
+<p>... building web applications with UI<br>... for mobile/desktop devices with/without touch<br>... with different screen resolutions.</p>
+<p>... also use build tools to optimize performance.  </p>
+<p>... automatically test your code and layouts.  </p>
+<p>... tracking and AB-Tests.<br>...</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h3 id="toolbox-overview">Toolbox Overview</h3>
-<p><a href="https://nodejs.org/en/">node</a> - Javascript on the server<br><a href="https://www.npmjs.com/">npm</a> - Node Package Manager including package.json<br><a href="http://gruntjs.com/">grunt</a> - Asset build tool - JSON based<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">gulp</a> - Asset build tool - stream based<br><a href="http://bower.io/">bower</a> - Package Manager for Javascript &amp; CSS libs<br><a href="https://webpack.github.io/">webpack</a> - Asset build tool - works fine with babel/ES2015<br><a href="https://github.com/lukehoban/es6features">EcmaScript 2015</a> - latest Javascript, needs to be transpiled (source-to-source)<br><a href="https://babeljs.io/">babel</a> - Javascript compiler for ES2015<br><a href="http://bundler.io/">bundler</a> - Ruby Package Manager<br><a href="http://guides.rubyonrails.org/asset_pipeline.html">Asset Pipeline</a> - Asset build tool - sprocket based</p>
+    <section class="slide-content"><h3 id="asset-pipeline-">Asset Pipeline ...</h3>
+<p>... is a mighty building tool<br>... which combines and compresses assets.  </p>
+<p>... super integrated into Rails via gem.  </p>
+<p>... produces assets marked with hashes.<br>...</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h3 id="grouped-tools-i">Grouped Tools I</h3>
-<p><strong>package manager</strong></p>
-<ul>
-<li>npm (node)</li>
-<li>bower (Javascript/CSS)</li>
-<li>bundler (Ruby)</li>
-</ul>
+    <section class="slide-content"><h3 id="motivation-">motivation ;)</h3>
+<p><img src="./combine_all_the_tools.jpg" alt=""></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h3 id="grouped-tools-ii">Grouped Tools II</h3>
-<p><strong>build tools</strong></p>
-<ul>
-<li>npm</li>
-<li>grunt</li>
-<li>gulp</li>
-<li>webpack</li>
-<li>Asset Pipeline</li>
-</ul>
+    <section class="slide-content"><h3 id="some-tools">some tools</h3>
+<p><a href="https://nodejs.org/en/">node</a> - Javascript on the server<br><a href="https://www.npmjs.com/">npm</a> - Node Package Manager including package.json<br><a href="http://gruntjs.com/">grunt</a> - Asset build tool - JSON based<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">gulp</a> - Asset build tool - stream based<br><a href="http://bower.io/">bower</a> - Package Manager for Javascript &amp; CSS libs<br><a href="https://webpack.github.io/">webpack</a> - Asset build tool - works fine with babel/ES2015<br><a href="https://github.com/lukehoban/es6features">EcmaScript 2015</a> - latest Javascript, needs to be transpiled (source-to-source)<br><a href="https://babeljs.io/">babel</a> - Javascript compiler for ES2015<br><a href="http://bundler.io/">bundler</a> - Ruby Package Manager<br><a href="http://guides.rubyonrails.org/asset_pipeline.html">Asset Pipeline</a> - Asset build tool - sprocket based</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="grouped-tools-iii">Grouped Tools III</h3>
-<p><strong>compiler</strong></p>
-<ul>
-<li>babel</li>
-<li>Asset Pipeline</li>
-</ul>
+    <section class="slide-content"><h3 id="grouped-tools">grouped tools</h3>
+<p><img src="./grouped_tools.jpg" alt=""></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h2 id="-">#</h2>
-<p>Wie sopielt das zusammen</p>
-<p>Good or Bad?</p>
-<p>depends on the kind of page<a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">https://en.wikipedia.org/wiki/Source-to-source_compiler</a>
-SPA where rails is just an API hmm...</p>
-<p>ES6 ??? it can pack
-Modules? Needed?</p>
-<h2 id="kontextr">kontextR</h2>
+    <section class="slide-content"><h3 id="kind-of-web-app">kind of web app</h3>
+<ul>
+<li>API/multiple clients - SPA</li>
+<li>(no) API/one client</li>
+<li>enterprise app</li>
+<li>small website</li>
+<li>progressive enhancement VS graceful degradation</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h3 id="sources">Sources</h3>
-<p><a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Wiki Compiler</a>
-<a href="http://www.ecma-international.org/ecma-262/6.0/">Standard ECMA-262 6th Edition / June 2015</a>
-<a href="https://www.npmjs.com/package/cleaver">Cleaver</a>
-<a href="https://github.com/rails/sprockets">Sprocket</a></p>
+    <section class="slide-content"><h3 id="progressive-enhancement">progressive enhancement</h3>
+<ul>
+<li>page works without Javascript</li>
+<li><p>javascript make it more useable</p>
+<ul>
+<li>date-input =&gt; fancy-datepicker</li>
+</ul>
+</li>
+<li><p>bundler for ruby dependencies</p>
+</li>
+<li>(bower for CSS/JS dependencies) =&gt; <a href="rails-assets.org">rails-assets.org</a></li>
+<li>asset pipeline pack</li>
+</ul>
+<p>combine:</p>
+<p>Asset Pipeline</p>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-11">
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><p>-&gt; maybe Progressive Enhancement</p>
+<p>ES6 ??? it can pack
+Modules? Needed?</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h2 id="kontextr">kontextR</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h3 id="sources">Sources</h3>
+<p><a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Wiki Compiler</a><br><a href="http://www.ecma-international.org/ecma-262/6.0/">Standard ECMA-262 6th Edition / June 2015</a><br><a href="https://www.npmjs.com/package/cleaver">Cleaver</a><br><a href="https://github.com/rails/sprockets">Sprocket</a><br><a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a>
+<a href="https://en.wikipedia.org/wiki/Fault_tolerance">Graceful Degradation</a></p>
+</section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-14">
     <section class="slide-content"><div class="author">
   <h1 class="name">Carsten Lamm</h1>
     <h3 class="github">
       <a href="https://github.com/https://github.com/FQ400">https://github.com/FQ400</a>
+    </h3>
+    <h3 class="url">
+      <a href="http://www.kontextr.com">http://www.kontextr.com</a>
     </h3>
 </div>
 </section>
