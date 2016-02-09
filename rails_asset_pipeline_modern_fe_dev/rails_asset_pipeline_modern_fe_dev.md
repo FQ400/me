@@ -15,7 +15,7 @@ output: basic.html
 1. Motivation  
 1. Frontend Definition
 1. Toolbox Overview
-1.
+
 
 --
 
@@ -45,14 +45,14 @@ output: basic.html
 
 [node](https://nodejs.org/en/) - Javascript on the server  
 [npm](https://www.npmjs.com/) - Node Package Manager including package.json  
-[grunt](http://gruntjs.com/) - modular asset build tool based on JSON configs  
-[gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) - modular asset build tool based on streams  
+[grunt](http://gruntjs.com/) - Asset build tool - JSON based  
+[gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) - Asset build tool - stream based  
 [bower](http://bower.io/) - Package Manager for Javascript & CSS libs  
-[webpack](https://webpack.github.io/) - modular asset build tool work fine with babel/ES2015  
+[webpack](https://webpack.github.io/) - Asset build tool - works fine with babel/ES2015  
 [EcmaScript 2015](https://github.com/lukehoban/es6features) - latest Javascript, needs to be transpiled (source-to-source)  
-[babel](https://babeljs.io/) - Javascript compiler for ES2015
-[bundler](http://bundler.io/) - Ruby Package Manager
-[Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) - Asset build tool based on sprocket
+[babel](https://babeljs.io/) - Javascript compiler for ES2015  
+[bundler](http://bundler.io/) - Ruby Package Manager  
+[Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) - Asset build tool - sprocket based  
 
 --
 
@@ -84,7 +84,7 @@ output: basic.html
 
 --
 
-### 
+###
 
 Wie sopielt das zusammen
 
