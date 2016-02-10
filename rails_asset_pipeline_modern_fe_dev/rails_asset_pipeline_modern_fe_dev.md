@@ -13,16 +13,17 @@ output: basic.html
 
 ### table of content
 
-1. background  
-1. frontend definition
-1. asset pipeline?
-1. motivation  
-1. tools
+1. Background  
+1. Frontend Definition  
+1. Asset Pipeline?  
+1. Tools
+1. Type  
+1. Basic Setup  
 1.
 
 --
 
-### my background
+### My Background
 
 - started with Rails 2 up to Rails 3 (~3 years)
 - **S**ingle **P**age **A**pplications using REST-APIs
@@ -59,13 +60,7 @@ output: basic.html
 
 --
 
-### motivation
-
-![](./combine_all_the_tools.jpg)
-
---
-
-### some tools
+### some Tools
 
 [node](https://nodejs.org/en/) - Javascript on the server  
 [npm](https://www.npmjs.com/) - Node Package Manager including package.json  
@@ -90,13 +85,16 @@ output: basic.html
 
 - API/multiple clients - SPA
 - (no) API/one client
-- enterprise app
-- small website
-- progressive enhancement VS graceful degradation
+- enterprise app / small website
+- progressive enhancement vs graceful degradation
 
 --
 
-### basic setup
+### Confusion by rails + ___
+
+--
+
+### Basic Setup
 
 - bundler for ruby dependencies
 - (bower for CSS/JS dependencies) => [rails-assets.org](rails-assets.org)
@@ -110,14 +108,29 @@ output: basic.html
 
 --
 
-### extended setup
+### extended setup ES6
+
+**npm >= v3**
+`npm install babel-preset-es2015 --save-dev`
+
+**.babelrc**
+`{ "presets": ["es2015"] }`
+
+**Gemfile**
+`gem sprockets-es6`
+
+**initializer/es6.rb**
+`require "sprockets/es6"`
+
+--
+
+### Asset Pipeline
 
 
 
+--
 
-- page works without Javascript
-- javascript make it more useable
-  - date-input => fancy-datepicker
+### even more
 
 
 
@@ -149,5 +162,6 @@ Modules? Needed?
 [Standard ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/)  
 [Cleaver](https://www.npmjs.com/package/cleaver)  
 [Sprocket](https://github.com/rails/sprockets)  
-[Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
-[Graceful Degradation](https://en.wikipedia.org/wiki/Fault_tolerance)
+[Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)  
+[Graceful Degradation](https://en.wikipedia.org/wiki/Fault_tolerance)  
+[Babel Rails](https://babeljs.io/docs/setup/#rails)
