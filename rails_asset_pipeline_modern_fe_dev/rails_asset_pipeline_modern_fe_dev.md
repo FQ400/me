@@ -18,6 +18,7 @@ output: basic.html
 1. asset pipeline?
 1. motivation  
 1. tools
+1.
 
 --
 
@@ -58,7 +59,7 @@ output: basic.html
 
 --
 
-### motivation ;)
+### motivation
 
 ![](./combine_all_the_tools.jpg)
 
@@ -95,15 +96,30 @@ output: basic.html
 
 --
 
-### progressive enhancement
+### basic setup
+
+- bundler for ruby dependencies
+- (bower for CSS/JS dependencies) => [rails-assets.org](rails-assets.org)
+
+**Gemfile**  
+`source 'https://rails-assets.org'`  
+`gem 'rails-assets-lodash'`  
+
+**Assets**  
+`//= lodash`  
+
+--
+
+### extended setup
+
+
+
 
 - page works without Javascript
 - javascript make it more useable
   - date-input => fancy-datepicker
 
-- bundler for ruby dependencies
-- (bower for CSS/JS dependencies) => [rails-assets.org](rails-assets.org)
-- asset pipeline pack
+
 
 
 combine:
