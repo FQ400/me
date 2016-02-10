@@ -366,17 +366,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   <div class="slide" id="slide-1">
     <section class="slide-content"><h1 id="asset-pipeline">Asset Pipeline</h1>
 <h2 id="modern-frontend-development">Modern Frontend Development</h2>
+<h2 id="by-carsten-lamm">by Carsten Lamm</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
     <section class="slide-content"><h3 id="table-of-content">table of content</h3>
 <ol>
-<li>Background  </li>
-<li>Frontend Definition  </li>
-<li>Asset Pipeline?  </li>
-<li>Tools</li>
-<li>Type  </li>
-<li>Basic Setup<br>1.</li>
+<li>Background <em>(1)</em>  </li>
+<li>Frontend Definition <em>(1)</em>  </li>
+<li>Asset Pipeline? <em>(1)</em>  </li>
+<li>Tools <em>(3)</em>  </li>
+<li>Types <em>(1)</em>  </li>
+<li>Basic Setup <em>(1)</em>  </li>
+<li>Extended Setup <em>(2)</em>  </li>
+<li>Done <em>(1)</em>  </li>
+<li>Sources <em>(1)</em></li>
 </ol>
 </section>
   </div>
@@ -405,12 +409,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <section class="slide-content"><h3 id="asset-pipeline-">Asset Pipeline ...</h3>
 <p>... is a mighty building tool<br>... which combines and compresses assets.  </p>
 <p>... super integrated into Rails via gem.  </p>
-<p>... produces assets marked with hashes.<br>...</p>
+<p>... produces assets marked with hashes.  </p>
+<p>... provides the easiest way to invoke multiple parser.<br><code>=&gt; application.css.scss.erb</code></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h3 id="some-tools">some Tools</h3>
-<p><a href="https://nodejs.org/en/">node</a> - Javascript on the server<br><a href="https://www.npmjs.com/">npm</a> - Node Package Manager including package.json<br><a href="http://gruntjs.com/">grunt</a> - Asset build tool - JSON based<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">gulp</a> - Asset build tool - stream based<br><a href="http://bower.io/">bower</a> - Package Manager for Javascript &amp; CSS libs<br><a href="https://webpack.github.io/">webpack</a> - Asset build tool - works fine with babel/ES2015<br><a href="https://github.com/lukehoban/es6features">EcmaScript 2015</a> - latest Javascript, needs to be transpiled (source-to-source)<br><a href="https://babeljs.io/">babel</a> - Javascript compiler for ES2015<br><a href="http://bundler.io/">bundler</a> - Ruby Package Manager<br><a href="http://guides.rubyonrails.org/asset_pipeline.html">Asset Pipeline</a> - Asset build tool - sprocket based</p>
+<p><a href="https://nodejs.org/en/">node</a> - Javascript on the server<br><a href="https://www.npmjs.com/">npm</a> - Node Package Manager including package.json<br><a href="http://gruntjs.com/">grunt</a> - Asset build tool - JSON based<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md">gulp</a> - Asset build tool - stream based<br><a href="http://bower.io/">bower</a> - Package Manager for Javascript &amp; CSS libs<br><a href="https://webpack.github.io/">webpack</a> - Asset build tool - works fine with babel/ES2015<br><a href="https://github.com/lukehoban/es6features">EcmaScript 2015</a> - latest Javascript, needs to be transpiled (source-to-source)<br><a href="https://babeljs.io/">babel</a> - Javascript compiler for ES2015<br><a href="http://bundler.io/">bundler</a> - Ruby Package Manager<br><a href="http://guides.rubyonrails.org/asset_pipeline.html">Asset Pipeline</a> - Asset build tool - sprockets based</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
@@ -419,6 +424,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h2 id="confusion-by-google-rails-______">Confusion by google: rails + <strong>__</strong></h2>
+<ul>
+<li>rails webpack</li>
+<li>rails gulp</li>
+<li>rails ES6</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="kind-of-web-app">kind of web app</h3>
 <ul>
 <li>API/multiple clients - SPA</li>
@@ -428,10 +442,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="confusion-by-rails-___">Confusion by rails + <em>_</em></h3>
-</section>
-  </div>
   <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="basic-setup">Basic Setup</h3>
 <ul>
@@ -439,47 +449,39 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <li>(bower for CSS/JS dependencies) =&gt; <a href="rails-assets.org">rails-assets.org</a></li>
 </ul>
 <p><strong>Gemfile</strong><br><code>source &#39;https://rails-assets.org&#39;</code><br><code>gem &#39;rails-assets-lodash&#39;</code>  </p>
-<p><strong>Assets</strong><br><code>//= lodash</code></p>
+<p><strong>Assets</strong><br><code>//= lodash</code><br><code>//= require_tree .</code></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h3 id="extended-setup-es6">extended setup ES6</h3>
-<p><strong>npm &gt;= v3</strong>
-<code>npm install babel-preset-es2015 --save-dev</code></p>
-<p><strong>.babelrc</strong>
-<code>{ &quot;presets&quot;: [&quot;es2015&quot;] }</code></p>
-<p><strong>Gemfile</strong>
-<code>gem sprockets-es6</code></p>
-<p><strong>initializer/es6.rb</strong>
-<code>require &quot;sprockets/es6&quot;</code></p>
+    <section class="slide-content"><h3 id="extended-setup-es2015-es6">extended setup ES2015 / ES6</h3>
+<p><strong>npm &gt;= v3</strong><br><code>npm install babel-preset-es2015 --save-dev</code></p>
+<p><strong>.babelrc</strong><br><code>{ &quot;presets&quot;: [&quot;es2015&quot;] }</code></p>
+<p><strong>Gemfile</strong><br><code>gem sprockets-es6</code></p>
+<p><strong>initializer/es6.rb</strong><br><code>require &quot;sprockets/es6&quot;</code></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h3 id="asset-pipeline">Asset Pipeline</h3>
+    <section class="slide-content"><h3 id="done-can-be-used">Done - can be used</h3>
+<ul>
+<li>all files like <code>*.js.es6</code> are found</li>
+<li>can be access via <code>//= require class_es6</code> directive</li>
+</ul>
+<p><strong>open point</strong></p>
+<ul>
+<li>es2015 for inline scripts</li>
+<li>es2015 modules<ul>
+<li>defined but not implemented</li>
+</ul>
+</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h3 id="even-more">even more</h3>
-<p>combine:</p>
-<p>Asset Pipeline</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><p>-&gt; maybe Progressive Enhancement</p>
-<p>ES6 ??? it can pack
-Modules? Needed?</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-15">
-    <section class="slide-content"><h2 id="kontextr">kontextR</h2>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="sources">Sources</h3>
-<p><a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Wiki Compiler</a><br><a href="http://www.ecma-international.org/ecma-262/6.0/">Standard ECMA-262 6th Edition / June 2015</a><br><a href="https://www.npmjs.com/package/cleaver">Cleaver</a><br><a href="https://github.com/rails/sprockets">Sprocket</a><br><a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a><br><a href="https://en.wikipedia.org/wiki/Fault_tolerance">Graceful Degradation</a><br><a href="https://babeljs.io/docs/setup/#rails">Babel Rails</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Wiki Compiler</a><br><a href="http://www.ecma-international.org/ecma-262/6.0/">Standard ECMA-262 6th Edition / June 2015</a><br><a href="https://www.npmjs.com/package/cleaver">Cleaver</a><br><a href="https://github.com/rails/sprockets">Sprockets</a><br><a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a><br><a href="https://en.wikipedia.org/wiki/Fault_tolerance">Graceful Degradation</a><br><a href="https://babeljs.io/docs/setup/#rails">Babel Rails</a></p>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-17">
+  <div class="slide hidden author-slide" id="slide-14">
     <section class="slide-content"><div class="author">
   <h1 class="name">Carsten Lamm</h1>
     <h3 class="github">

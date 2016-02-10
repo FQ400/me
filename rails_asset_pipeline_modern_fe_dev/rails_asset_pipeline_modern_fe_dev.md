@@ -8,18 +8,21 @@ output: basic.html
 
 # Asset Pipeline
 ## Modern Frontend Development
+## by Carsten Lamm
 
 --
 
 ### table of content
 
-1. Background  
-1. Frontend Definition  
-1. Asset Pipeline?  
-1. Tools
-1. Type  
-1. Basic Setup  
-1.
+1. Background _(1)_  
+1. Frontend Definition _(1)_  
+1. Asset Pipeline? _(1)_  
+1. Tools _(3)_  
+1. Types _(1)_  
+1. Basic Setup _(1)_  
+1. Extended Setup _(2)_  
+1. Done _(1)_  
+1. Sources _(1)_  
 
 --
 
@@ -56,7 +59,9 @@ output: basic.html
 ... super integrated into Rails via gem.  
 
 ... produces assets marked with hashes.  
-...
+
+... provides the easiest way to invoke multiple parser.  
+`   => application.css.scss.erb`  
 
 --
 
@@ -71,7 +76,7 @@ output: basic.html
 [EcmaScript 2015](https://github.com/lukehoban/es6features) - latest Javascript, needs to be transpiled (source-to-source)  
 [babel](https://babeljs.io/) - Javascript compiler for ES2015  
 [bundler](http://bundler.io/) - Ruby Package Manager  
-[Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) - Asset build tool - sprocket based  
+[Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) - Asset build tool - sprockets based  
 
 --
 
@@ -81,16 +86,20 @@ output: basic.html
 
 --
 
+## Confusion by google: rails + ______
+
+- rails webpack
+- rails gulp
+- rails ES6
+
+--
+
 ### kind of web app
 
 - API/multiple clients - SPA
 - (no) API/one client
 - enterprise app / small website
 - progressive enhancement vs graceful degradation
-
---
-
-### Confusion by rails + ___
 
 --
 
@@ -105,55 +114,35 @@ output: basic.html
 
 **Assets**  
 `//= lodash`  
+`//= require_tree .`
 
 --
 
-### extended setup ES6
+### extended setup ES2015 / ES6
 
-**npm >= v3**
+**npm >= v3**  
 `npm install babel-preset-es2015 --save-dev`
 
-**.babelrc**
+**.babelrc**  
 `{ "presets": ["es2015"] }`
 
-**Gemfile**
+**Gemfile**  
 `gem sprockets-es6`
 
-**initializer/es6.rb**
+**initializer/es6.rb**  
 `require "sprockets/es6"`
 
 --
 
-### Asset Pipeline
+### Done - can be used
 
+- all files like `*.js.es6` are found
+- can be access via `//= require class_es6` directive
 
-
---
-
-### even more
-
-
-
-
-combine:
-
-Asset Pipeline
-
---
-
- -> maybe Progressive Enhancement
-
-
-
-
-
-ES6 ??? it can pack
-Modules? Needed?
---
-
-## kontextR
-
-
+**open point**
+- es2015 for inline scripts
+- es2015 modules
+  - defined but not implemented
 
 --
 ### Sources
@@ -161,7 +150,7 @@ Modules? Needed?
 [Wiki Compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)  
 [Standard ECMA-262 6th Edition / June 2015](http://www.ecma-international.org/ecma-262/6.0/)  
 [Cleaver](https://www.npmjs.com/package/cleaver)  
-[Sprocket](https://github.com/rails/sprockets)  
+[Sprockets](https://github.com/rails/sprockets)  
 [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)  
 [Graceful Degradation](https://en.wikipedia.org/wiki/Fault_tolerance)  
 [Babel Rails](https://babeljs.io/docs/setup/#rails)
