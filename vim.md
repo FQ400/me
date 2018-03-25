@@ -7,7 +7,7 @@ He talks about the basic idea of Vim. It is all about the combination of a `verb
 
 ## Decided to go with Neovim.
 
-nvim stores its configuration in `.local/share/nvim`. The executable is called `nvim`. An alias makes nvim aware of `.vimrc`. As a plugin system I use [vim-plug](https://github.com/junegunn/vim-plug).
+nvim stores its configuration/plugins by default in `.local/share/nvim` and its initial setup file is stored in ´.config/nvim/init.vim´. The executable is called `nvim`. As a plugin system I use [vim-plug](https://github.com/junegunn/vim-plug).
 
 Autocompletion using [Deoplate](https://github.com/Shougo/deoplete.nvim) led to install multiple python environments.  
 [Pyenv](https://github.com/pyenv/pyenv-installer) helps with installing multiple Pythons.
