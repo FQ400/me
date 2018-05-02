@@ -8,11 +8,11 @@ Just a place to store information.
 ### Markdown
 
 ```markdown
-[link_name](link_url)
+[an example](http://example.com/ "Title")
 ```
 
 ```markdown
-(image_title)[image_url]
+![Alt text](/path/to/img.jpg "Optional title")
 ```
 
 
